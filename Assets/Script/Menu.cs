@@ -7,13 +7,17 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     public GameObject mainpanel;
-    public GameObject settingpanel;
+    public GameObject creditpanel;
+    public GameObject htppanel;
+    public GameObject levelpanel;
 
     // Start is called before the first frame update
     void Start()
     {
         mainpanel.SetActive(true);
-        settingpanel.SetActive(false);
+        creditpanel.SetActive(false);
+        htppanel.SetActive(false);
+        levelpanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -22,21 +26,29 @@ public class Menu : MonoBehaviour
         
     }
 
-    public void StartButton(string scenename)
-    {
-        SceneManager.LoadScene(scenename);
-    }
-
-    public void SettingButton()
+    public void StartButton()
     {
         mainpanel.SetActive(false);
-        settingpanel.SetActive(true);
+        levelpanel.SetActive(true);
+    }
+
+    public void CreditButton()
+    {
+        mainpanel.SetActive(false);
+        creditpanel.SetActive(true);
+    }
+
+    public void HTPButton()
+    {
+        mainpanel.SetActive(false);
+        htppanel.SetActive(true);
     }
 
     public void KembaliButton()
     {
         mainpanel.SetActive(true);
-        settingpanel.SetActive(false);
+        creditpanel.SetActive(false);
+        levelpanel.SetActive(false);
     }
 
     public void KeluarButton()
