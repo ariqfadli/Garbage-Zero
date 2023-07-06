@@ -30,12 +30,13 @@ public class Levelmanager : MonoBehaviour
         }
         else
         {
-            levelTerakhirMain = PlayerPrefs.GetInt("LEVEL");
+            levelTerakhirMain = PlayerPrefs.GetInt("LEVEL"); 
             SceneManager.LoadScene("Game" + levelTerakhirMain);
         }
 
         for (int i = 0; i < listbuttonlevel.Length; i++)
         {
+
             if (i < levelTerakhirMain)
                 listbuttonlevel[i].interactable = true;
             else
@@ -44,6 +45,7 @@ public class Levelmanager : MonoBehaviour
     }
     public void PilihLevel(string levelBerapa)
     {
+        AudioController.Instance.SoundButton();
         SceneManager.LoadScene("Game" + levelBerapa);
     }
 }
