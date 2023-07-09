@@ -7,7 +7,7 @@ public class Gerakan : MonoBehaviour
 {
 
     Rigidbody2D rb;
-    public float kecepatan = 5f;
+    public float kecepatan = 2f;
     private Vector3 gerakan;
     // Start is called before the first frame update
     void Start()

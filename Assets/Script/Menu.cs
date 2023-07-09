@@ -10,6 +10,7 @@ public class Menu : MonoBehaviour
     public GameObject creditpanel;
     public GameObject htppanel;
     public GameObject levelpanel;
+    public GameObject storypanel;
 
     public Image imageButtonMute;
 
@@ -20,6 +21,7 @@ public class Menu : MonoBehaviour
         creditpanel.SetActive(false);
         htppanel.SetActive(false);
         levelpanel.SetActive(false);
+        storypanel.SetActive(false);
 
         if(AudioController.Instance.audioSourceDefault.mute == true)
         {
@@ -63,6 +65,14 @@ public class Menu : MonoBehaviour
         htppanel.SetActive(true);
     }
 
+    public void StoryButton()
+    {
+        AudioController.Instance.SoundButton();
+
+        mainpanel.SetActive(false);
+        storypanel.SetActive(true);
+    }
+
     public void KembaliButton()
     {
         AudioController.Instance.SoundButton();
@@ -70,6 +80,7 @@ public class Menu : MonoBehaviour
         mainpanel.SetActive(true);
         creditpanel.SetActive(false);
         levelpanel.SetActive(false);
+        storypanel.SetActive(false);
     }
 
     public void KeluarButton()
