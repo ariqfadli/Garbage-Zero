@@ -81,6 +81,7 @@ public class Menu : MonoBehaviour
         creditpanel.SetActive(false);
         levelpanel.SetActive(false);
         storypanel.SetActive(false);
+        htppanel.SetActive(false);
     }
 
     public void KeluarButton()
